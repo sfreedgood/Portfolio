@@ -8,26 +8,25 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import { NavLink } from 'react-router-dom';
+import MenuItem from "@mui/material/MenuItem";
+import { NavLink } from "react-router-dom";
 
-import linkedInIcon from '../assets/LI-In-Bug.png'
-import githubIcon from '../assets/github-mark.svg' 
-import Icon from './Icon';
+import linkedInIcon from "../assets/In-White-21-Γäó.png";
+import githubIcon from "../assets/github-mark-white.svg";
+import Icon from "./Icon";
 
 const pages = [
   {
-    path: '/',
-    navText: 'Home',
+    path: "/",
+    navText: "Home",
   },
+  // {
+  //   path: '/about',
+  //   navText: 'About',
+  // },
   {
-    path: '/about',
-    navText: 'About',
-  },
-  {
-    path: '/resume',
-    navText: 'Resume',
+    path: "/resume",
+    navText: "Resume",
   },
 ];
 const links = [
