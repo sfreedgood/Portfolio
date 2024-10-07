@@ -3,31 +3,35 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.tsx'
 import './index.css'
-import { About } from './components/About.tsx'
+// import { About } from './components/About.tsx'
 import { Resume } from './components/Resume.tsx'
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./themes.ts";
 
 const AppRouterConfig = [
   {
-    path: '/',
+    path: "/",
     element: <App />,
-    navText: 'Home',
+    navText: "Home",
   },
+  // {
+  //   path: '/about',
+  //   element: <About />,
+  //   navText: 'About',
+  // },
   {
-    path: '/about',
-    element: <About />,
-    navText: 'About',
-  },
-  {
-    path: '/resume',
+    path: "/resume",
     element: <Resume />,
-    navText: 'Resume',
+    navText: "Resume",
   },
-]
+];
 
 const router = createBrowserRouter(AppRouterConfig)
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  </React.StrictMode>
+);
